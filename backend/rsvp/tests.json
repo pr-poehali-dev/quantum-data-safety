@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "RSVP submit",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест Гость", "guests_count": 2, "message": "Будем рады!"},
+      "expectedStatus": 200,
+      "bodyMatcher": "any"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS rsvp (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  guests_count INTEGER NOT NULL DEFAULT 1,
+  message TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
