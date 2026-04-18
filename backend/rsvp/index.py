@@ -1,9 +1,29 @@
 import json
 import os
+import smtplib
 import psycopg2
+from email.mime.text import MIMEText
+
+SMTP_EMAIL = "ninadima_06_2026@mail.ru"  # v2
+
+def send_email(name: str, guests_count: int, message: str):
+    text = f"""Новое подтверждение присутствия на свадьбе!
+
+Имя: {name}
+Гостей: {guests_count}
+Пожелание: {message or "—"}
+"""
+    msg = MIMEText(text, "plain", "utf-8")
+    msg["Subject"] = f"💌 {name} подтвердил(а) присутствие"
+    msg["From"] = SMTP_EMAIL
+    msg["To"] = SMTP_EMAIL
+
+    with smtplib.SMTP_SSL("smtp.mail.ru", 465) as server:
+        server.login(SMTP_EMAIL, os.environ["SMTP_PASSWORD"])
+        server.sendmail(SMTP_EMAIL, SMTP_EMAIL, msg.as_string())
 
 def handler(event: dict, context) -> dict:
-    """Сохраняет подтверждение присутствия гостя на свадьбе."""
+    """Сохраняет подтверждение присутствия гостя и отправляет письмо на почту."""
     cors = {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, OPTIONS",
@@ -30,6 +50,8 @@ def handler(event: dict, context) -> dict:
     conn.commit()
     cur.close()
     conn.close()
+
+    send_email(name, guests_count, message)
 
     return {
         "statusCode": 200,
