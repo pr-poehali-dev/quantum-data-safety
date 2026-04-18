@@ -1,22 +1,40 @@
 export default function Featured() {
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0 bg-white">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0" style={{ backgroundColor: "#fdf8f4" }}>
       <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
         <img
           src="/images/woman-horse.jpg"
-          alt="Woman on horse in countryside"
+          alt="Нежный момент"
           className="w-full h-full object-cover"
+          style={{ filter: "saturate(0.7) brightness(1.05)" }}
         />
       </div>
-      <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
-        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Функции, которые не стоят на месте</h3>
-        <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Не просто список возможностей — живые, дышащие акценты. Каждая функция адаптируется к движению, контексту и настроению,
-          оживляя продукт с первого взгляда.
+      <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-16 lg:order-1 gap-8">
+        <p className="uppercase text-xs tracking-[0.3em]" style={{ color: "#b89a8a" }}>
+          Детали торжества
         </p>
-        <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-          Подробнее
-        </button>
+        <h2
+          className="text-3xl lg:text-5xl font-light leading-tight"
+          style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', color: "#4a3728", fontStyle: "italic" }}
+        >
+          Мы будем бесконечно счастливы видеть вас среди наших гостей
+        </h2>
+        <div className="flex flex-col gap-5" style={{ color: "#6b5244" }}>
+          <div className="flex items-start gap-4">
+            <span className="text-xs uppercase tracking-widest mt-1 opacity-60 min-w-[80px]">Дата</span>
+            <span className="text-base font-light">6 июня 2026 года</span>
+          </div>
+          <div className="w-full h-px" style={{ backgroundColor: "#e8d5c8" }} />
+          <div className="flex items-start gap-4">
+            <span className="text-xs uppercase tracking-widest mt-1 opacity-60 min-w-[80px]">Сбор</span>
+            <span className="text-base font-light">13:40</span>
+          </div>
+          <div className="w-full h-px" style={{ backgroundColor: "#e8d5c8" }} />
+          <div className="flex items-start gap-4">
+            <span className="text-xs uppercase tracking-widest mt-1 opacity-60 min-w-[80px]">Место</span>
+            <span className="text-base font-light">ул. Ленина, 94</span>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -19,20 +19,29 @@ export default function Promo() {
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
             src="/images/spiral-circles.jpg"
-            alt="Abstract spiral circles"
+            alt="Романтичный фон"
             className="w-full h-full object-cover"
+            style={{ filter: "saturate(0.4) brightness(0.6) sepia(0.3)" }}
           />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(180,140,120,0.4) 0%, rgba(140,110,100,0.5) 100%)" }} />
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Анатомия возможностей
-      </h3>
-
-      <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Каждая секция — рамка для твоей истории. Формируй её, миксуй и позволь контенту
-        литься в неожиданные паттерны, заставляя листать дальше.
+      <p className="absolute top-12 right-6 text-white/70 uppercase z-10 text-sm tracking-[0.3em] font-light">
+        Пожелания гостям
       </p>
+
+      <div className="absolute bottom-12 right-6 z-10 text-right max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl">
+        <p
+          className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light italic leading-relaxed mb-6"
+          style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
+        >
+          Пожалуйста, воздержитесь от традиционного «горько» — нам хочется, чтобы атмосфера была лёгкой и романтичной
+        </p>
+        <p className="text-white/70 text-sm tracking-[0.2em] uppercase font-light">
+          Одежда в пастельных тонах
+        </p>
+      </div>
     </div>
   );
 }

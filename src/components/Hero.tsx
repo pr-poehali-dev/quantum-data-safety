@@ -20,17 +20,23 @@ export default function Hero() {
       >
         <img
           src="/images/mountain-landscape.jpg"
-          alt="Mountain landscape"
+          alt="Пейзаж"
           className="w-full h-full object-cover"
+          style={{ filter: "brightness(0.75) saturate(0.8)" }}
         />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(180,140,120,0.2) 0%, rgba(100,80,70,0.35) 100%)" }} />
       </motion.div>
 
-      <div className="relative z-10 text-center text-white">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          ОТКРОЙ
+      <div className="relative z-10 text-center text-white px-6">
+        <p className="text-sm md:text-base uppercase tracking-[0.4em] font-light mb-6 opacity-80">
+          6 июня 2026
+        </p>
+        <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-light italic tracking-wide mb-6" style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}>
+          Нина & Дмитрий
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
-          Исследуй границы дизайна с иммерсивным параллакс-эффектом
+        <div className="w-16 h-px bg-white/60 mx-auto mb-6" />
+        <p className="text-sm md:text-base font-light tracking-[0.25em] uppercase opacity-80">
+          Приглашение на свадьбу
         </p>
       </div>
     </div>
