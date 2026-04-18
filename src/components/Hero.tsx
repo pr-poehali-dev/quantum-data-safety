@@ -19,10 +19,10 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="/images/mountain-landscape.jpg"
-          alt="Пейзаж"
+          src="https://cdn.poehali.dev/projects/9374824a-72f1-4f23-9fa1-62bd7f0f2bae/bucket/44acc989-e891-4c8b-9e66-2a9dc88d92e2.jpg"
+          alt="Обручальные кольца"
           className="w-full h-full object-cover"
-          style={{ filter: "brightness(0.75) saturate(0.8)" }}
+          style={{ filter: "brightness(0.65) saturate(0.9)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(180,140,120,0.2) 0%, rgba(100,80,70,0.35) 100%)" }} />
       </motion.div>

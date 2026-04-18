@@ -18,10 +18,10 @@ export default function Promo() {
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
-            src="/images/spiral-circles.jpg"
-            alt="Романтичный фон"
-            className="w-full h-full object-cover"
-            style={{ filter: "saturate(0.4) brightness(0.6) sepia(0.3)" }}
+            src="https://cdn.poehali.dev/projects/9374824a-72f1-4f23-9fa1-62bd7f0f2bae/bucket/ac04652c-ac40-48a2-b98f-e6829914fd7c.jpg"
+            alt="Нина в детстве"
+            className="w-full h-full object-cover object-top"
+            style={{ filter: "saturate(0.5) brightness(0.55) sepia(0.2)" }}
           />
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(180,140,120,0.4) 0%, rgba(140,110,100,0.5) 100%)" }} />
         </motion.div>

@@ -3,10 +3,10 @@ export default function Featured() {
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0" style={{ backgroundColor: "#fdf8f4" }}>
       <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
         <img
-          src="/images/woman-horse.jpg"
-          alt="Нежный момент"
-          className="w-full h-full object-cover"
-          style={{ filter: "saturate(0.7) brightness(1.05)" }}
+          src="https://cdn.poehali.dev/projects/9374824a-72f1-4f23-9fa1-62bd7f0f2bae/bucket/1f7a26ea-54a8-4c79-98be-5642cc6c4342.jpg"
+          alt="Дмитрий в детстве"
+          className="w-full h-full object-cover object-top"
+          style={{ filter: "saturate(0.75) brightness(1.05)" }}
         />
       </div>
       <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-16 lg:order-1 gap-8">
